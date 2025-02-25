@@ -1,0 +1,13 @@
+<div *ngIf="user; else loginTemplate">
+    <p>Bienvenido, {{ user.displayName }}</p>
+    <button (click)="logout()">Cerrar Sesión</button>
+  </div>
+  <ng-template #loginTemplate>
+    <p>Redirigiendo al login...</p>
+  </ng-template>
+  <hr>
+  <nav>
+    <a routerLink="/componente1">Componente 1</a> |
+    <a routerLink="/componente2">Componente 2</a>
+  </nav>
+  <router-outlet></router-outlet>
